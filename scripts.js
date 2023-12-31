@@ -1,3 +1,24 @@
+// MAIN GOAL PROGRESS BAR
+const calculateAverageProgress = function (goals) {
+  if (goals.length === 0) {
+    return 0;
+  }
+
+  const totalProgress = goals.reduce((sum, goal) => {
+    return sum + (goal.progress !== undefined ? parseFloat(goal.progress) : 0);
+  }, 0);
+
+  return (totalProgress / goals.length).toFixed(2);
+};
+
+const updateTotalProgressBar = function (averageProgress) {
+  const totalProgressNum = document.querySelector('.progress-main-num');
+  const totalProgressBar = document.querySelector('.range-main');
+  totalProgressBar.style.setProperty('--p', `${averageProgress}`);
+  totalProgressNum.textContent = `${averageProgress}%`;
+};
+
+// ALL THE GOALS
 const createGoal = function (goalData) {
   const goalElement = document.createElement('div');
 
@@ -31,6 +52,9 @@ const renderGoals = function (goals) {
     const goal = createGoal(goalData);
     goalsContainer.appendChild(goal);
   });
+
+  const averageProgress = calculateAverageProgress(goals);
+  updateTotalProgressBar(averageProgress);
 };
 
 fetch('./goals.json')
