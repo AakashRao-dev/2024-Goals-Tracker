@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Orbitron&display=swap');
+
+:root {
+  --clr-background: #0a050d;
+  --clr-primary: #9b4eff;
+  --clr-primary-dark: #49108b;
+  --clr-secondary: #e26ee5;
+  --clr-neutral: #f3f8ff;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background: var(--clr-background);
+  font-family: 'Mukta', sans-serif;
+  color: var(--clr-neutral);
+  line-height: 1.4;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+h1 {
+  color: var(--clr-primary);
+  font-size: clamp(32px, 7vw, 58px);
+}
+
+h1,
+h2,
+.progress {
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 2px;
+}
+
+.first-letter {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.progress-main {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.range-main {
+  margin: 1rem auto 0;
+  font-family: 'Orbitron', monospace;
+  position: relative;
+  background-color: var(--clr-neutral);
+  width: var(--w);
+  height: var(--h);
+  transform: skew(30deg);
+  box-shadow: 0 0 7px 5px var(--clr-primary);
+
+  &:before {
+    --width: calc(var(--p) * 1%);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--clr-primary-dark);
+    z-index: 0;
+    animation: load 0.5s forwards linear, glitch 2s infinite linear;
+  }
+}
+
+@keyframes load {
+  to {
+    width: var(--width);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  5% {
+    transform: translate(0, 0);
+  }
+  1% {
+    transform: translate(-5%, -10%);
+  }
+  2% {
+    transform: translate(10%, 30%);
+  }
+  3% {
+    transform: translate(-43%, 10%);
+  }
+  4% {
+    transform: translate(2%, -23%);
+  }
+}
+
+/* MAIN CONTENT STARTS HERE */
+
+main {
+  margin-top: 6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+.progress-secondary {
+  margin-top: 1rem;
+}
+
+.range-secondary {
+  margin: 1rem 0;
+  font-family: 'Orbitron', monospace;
+  position: relative;
+  background-color: var(--clr-neutral);
+  width: var(--w);
+  height: var(--h);
+
+  &:before {
+    --width: calc(var(--p) * 1%);
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--clr-secondary);
+    z-index: 0;
+    animation: load 0.5s forwards linear;
+  }
+}
