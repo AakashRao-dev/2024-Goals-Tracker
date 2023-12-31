@@ -28,7 +28,7 @@ body {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 4rem;
+  padding: 4rem 1rem;
 }
 
 h1 {
@@ -103,10 +103,11 @@ h2,
   }
 }
 
-/* MAIN CONTENT STARTS HERE */
-
-main {
-  margin-top: 6rem;
+/* STYLING FOR GOALS STARTS HERE */
+.goals-container {
+  margin: 7rem 0 3rem;
+  display: grid;
+  gap: 3rem;
 }
 
 h2 {
@@ -124,6 +125,7 @@ h2 {
   background-color: var(--clr-neutral);
   width: var(--w);
   height: var(--h);
+  border-radius: 10px;
 
   &:before {
     --width: calc(var(--p) * 1%);
@@ -138,4 +140,31 @@ h2 {
     z-index: 0;
     animation: load 0.5s forwards linear;
   }
+}
+
+@media (max-width: 600px) {
+  .range-main {
+    --w: 100% !important;
+  }
+
+  .range-secondary {
+    --w: 100% !important;
+  }
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--clr-secondary);
+  /* Transparent border for visibility in WHCM */
+  border: 2px solid transparent;
 }
