@@ -4,6 +4,7 @@
   --clr-background: #0a050d;
   --clr-primary: #9b4eff;
   --clr-primary-dark: #49108b;
+  --clr-text: #9ca3af;
   --clr-secondary: #e26ee5;
   --clr-neutral: #f3f8ff;
 }
@@ -17,7 +18,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
   background: var(--clr-background);
   font-family: 'Mukta', sans-serif;
   color: var(--clr-neutral);
@@ -31,9 +32,13 @@ body {
   padding: 4rem 1rem;
 }
 
-h1 {
+.info h1 {
   color: var(--clr-primary);
   font-size: clamp(32px, 7vw, 58px);
+}
+
+.info p {
+  color: var(--clr-text);
 }
 
 h1,
@@ -46,6 +51,7 @@ h2,
 .first-letter {
   font-size: 3rem;
   font-weight: 900;
+  color: var(--clr-neutral);
 }
 
 .progress-main {
@@ -107,7 +113,7 @@ h2,
 .goals-container {
   margin: 7rem 0 3rem;
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 h2 {
@@ -116,6 +122,26 @@ h2 {
 
 .progress-secondary {
   margin-top: 1rem;
+}
+
+.goal .progress {
+  color: var(--clr-secondary);
+}
+
+.goal .description {
+  color: var(--clr-text);
+  font-size: 1.2rem;
+}
+
+.goal > .pointers {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+li::before {
+  content: '• ';
+  color: var(--clr-text);
+  margin-right: 0.3rem;
 }
 
 .range-secondary {
