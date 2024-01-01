@@ -38,12 +38,17 @@
         </div>
 
         <div class="progress-main">
-          Total Progress: <span class="progress progress-main-num">0.00%</span>
-          <div class="range-main" style="--p: 0; --h: 20px; --w: 500px"></div>
+          Total Progress:
+          <span class="progress" id="progress-main">0.00%</span>
+          <div
+            class="range-main"
+            id="range-main"
+            style="--p: 0; --h: 20px; --w: 500px"
+          ></div>
         </div>
       </div>
 
-      <section class="goals-container"></section>
+      <section class="goals-container" id="goals-container"></section>
     </div>
 
     <script src="./scripts.js"></script>

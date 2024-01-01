@@ -2,6 +2,7 @@
   {
     "title": "Diversify my Income",
     "description": "In 2024 this will be my main goal, and also the one that is going to take of my time and effort.",
+    "progress": 10,
     "pointers": [
       "Reach the $20k+ target",
       "Make a minimum $10k from Upwork and Fiverr (10+ clients / month)",
@@ -13,6 +14,7 @@
   {
     "title": "Contribute to Open Source",
     "description": "Build a great persona around the Open Source with Web Development",
+    "progress": 0,
     "pointers": [
       "Contribute to 10+ repositories with (50+) big contributions",
       "Build 4 Open Source Projects (Hackathon Projects Acceptable)"
@@ -21,6 +23,7 @@
   {
     "title": "Consistently post High-Quality content",
     "description": "Post content daily (starting from 10th Jan) on Twitter, LinkedIn and Instagram regularly",
+    "progress": 0,
     "pointers": [
       "Daily twitter thread (a guide or a tip)",
       "Publish 100+ personal blogs (2 weekly posts)",
@@ -31,6 +34,7 @@
   {
     "title": "Build more projects",
     "description": "This is to keep my track towards upskilling myself and daily learning",
+    "progress": 0,
     "pointers": [
       "Build 100+ Big Level projects (Hackathon Projects Acceptable)",
       "Design & Build 3 useful Chrome Extensions",

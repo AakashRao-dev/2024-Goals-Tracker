@@ -4,9 +4,12 @@
   --clr-background: #0a050d;
   --clr-primary: #9b4eff;
   --clr-primary-dark: #49108b;
-  --clr-text: #9ca3af;
   --clr-secondary: #e26ee5;
   --clr-neutral: #f3f8ff;
+
+  --clr-text: #9ca3af;
+  --font-main: 'Mukta', sans-serif;
+  --font-secondary: 'Orbitron', monospace;
 }
 
 *,
@@ -20,7 +23,7 @@
 body {
   font-size: 18px;
   background: var(--clr-background);
-  font-family: 'Mukta', sans-serif;
+  font-family: var(--font-main);
   color: var(--clr-neutral);
   line-height: 1.4;
   position: relative;
@@ -32,6 +35,7 @@ body {
   padding: 4rem 1rem;
 }
 
+/* HEADER STYLING */
 .info h1 {
   color: var(--clr-primary);
   font-size: clamp(32px, 7vw, 58px);
@@ -44,7 +48,7 @@ body {
 h1,
 h2,
 .progress {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--font-secondary);
   letter-spacing: 2px;
 }
 
@@ -133,7 +137,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-.goal > .pointers {
+.goal .pointers {
   margin: 1rem 0;
   list-style: none;
 }

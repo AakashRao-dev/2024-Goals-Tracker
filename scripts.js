@@ -1,3 +1,8 @@
+// Selecting DOM Elements
+const totalProgressNum = document.getElementById('progress-main');
+const totalProgressBar = document.getElementById('range-main');
+const goalsContainer = document.getElementById('goals-container');
+
 // MAIN GOAL PROGRESS BAR
 const calculateAverageProgress = function (goals) {
   if (goals.length === 0) {
@@ -12,13 +17,11 @@ const calculateAverageProgress = function (goals) {
 };
 
 const updateTotalProgressBar = function (averageProgress) {
-  const totalProgressNum = document.querySelector('.progress-main-num');
-  const totalProgressBar = document.querySelector('.range-main');
   totalProgressBar.style.setProperty('--p', `${averageProgress}`);
   totalProgressNum.textContent = `${averageProgress}%`;
 };
 
-// ALL THE GOALS
+// ALL THE INDIVIDUAL GOALS
 const createGoal = function (goalData) {
   const goalElement = document.createElement('div');
 
@@ -46,8 +49,6 @@ const createGoal = function (goalData) {
 };
 
 const renderGoals = function (goals) {
-  const goalsContainer = document.querySelector('.goals-container');
-
   goals.forEach(goalData => {
     const goal = createGoal(goalData);
     goalsContainer.appendChild(goal);
@@ -57,6 +58,7 @@ const renderGoals = function (goals) {
   updateTotalProgressBar(averageProgress);
 };
 
+// FETCHING DATA FROM JSON FILE
 fetch('./goals.json')
   .then(response => response.json())
   .then(goals => renderGoals(goals))
