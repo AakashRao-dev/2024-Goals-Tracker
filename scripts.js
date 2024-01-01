@@ -59,7 +59,7 @@ const renderGoals = function (goals) {
 };
 
 // FETCHING DATA FROM JSON FILE
-fetch('./goals.json')
+fetch('./assets/goals.json')
   .then(response => response.json())
   .then(goals => renderGoals(goals))
   .catch(err => console.error('Error loading JSON data', err));
